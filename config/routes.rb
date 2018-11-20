@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :pages
+  root  'static_pages#home'
+
+  get '/about', to: 'static_pages#about'
   
+  resources :pages
+
   # get 'pages/index'
   # get 'pages/show'
   # get 'pages/new'
